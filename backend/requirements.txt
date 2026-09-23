@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+python-multipart
+librosa
+torch
+torchaudio
+numpy
+scikit-learn
+soundfile
+sqlalchemy
+python-jose[cryptography]
+passlib[bcrypt]
+python-dotenv
+aiofiles

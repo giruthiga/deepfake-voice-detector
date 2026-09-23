@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+ENV/
+
+# Database
+*.db
+*.sqlite3
+*.sqlite
+
+# Uploads & temp
+uploads/
+temp/
+
+# Dataset (huge files - don't commit)
+backend/data/
+
+# Trained model (too big)
+backend/models/*.pth
+backend/models/*.h5
+backend/models/*.pt
+
+# Environment
+.env
+.env.local
+.env*.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (backend doesn't need it, but just in case)
+node_modules/
+.next/
+build/
+out/

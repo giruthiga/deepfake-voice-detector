@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #B784A7;
+  --color-primary-light: #CDA3C0;
+  --color-accent: #67E8F9;
+  --color-surface: #111111;
+  --color-surface-light: #1A1A1A;
+  --color-muted: #A1A1AA;
+  --color-border: #27272A;
+  --color-success: #22C55E;
+  --color-danger: #EF4444;
+  --color-warning: #EAB308;
+  --font-sans: Inter, sans-serif;
+}
+
+/* =========================================
+   CSS VARIABLES FOR THEMES
+   ========================================= */
+:root {
+  --bg-main: #000000;
+  --bg-card: #111111;
+  --bg-secondary: #1A1A1A;
+  --text-main: #ffffff;
+  --text-muted: #A1A1AA;
+  --border-color: #27272A;
+  --scrollbar-track: #000000;
+  --scrollbar-thumb: #27272A;
+}
+
+html.light {
+  --bg-main: #F8FAFC;
+  --bg-card: #ffffff;
+  --bg-secondary: #f1f5f9;
+  --text-main: #1a1a1a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --scrollbar-track: #F8FAFC;
+  --scrollbar-thumb: #cbd5e1;
+}
+
+/* =========================================
+   BASE STYLES
+   ========================================= */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, sans-serif;
+}
+
+/* =========================================
+   CUSTOM SCROLLBAR
+   ========================================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+/* =========================================
+   CUSTOM COMPONENT STYLES
+   ========================================= */
+.glow {
+  box-shadow: 0 0 20px rgba(183, 132, 167, 0.3);
+}
+
+.glow:hover {
+  box-shadow: 0 0 30px rgba(183, 132, 167, 0.5);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #B784A7, #38BDF8, #67E8F9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  border-color: rgba(183, 132, 167, 0.5);
+  box-shadow: 0 0 20px rgba(183, 132, 167, 0.2);
+  transform: translateY(-4px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #B784A7, #38BDF8);
+  color: #000;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 30px rgba(183, 132, 167, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Input styling */
+input, textarea, select {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* Navbar */
+.bg-black\/80 {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+html.light .bg-black\/80 {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.bg-black\/95 {
+  background-color: rgba(0, 0, 0, 0.95) !important;
+}
+
+html.light .bg-black\/95 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Animation */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
