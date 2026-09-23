@@ -53,47 +53,45 @@ Next.js Frontend (Port 3000) <--HTTP--> FastAPI Backend (Port 8000)
 v v
 Supabase Auth & Storage Audio Processing + ML Inference
 
-text
-
 ## Project Structure
+
+```
 deepfake-voice-detector/
-|
 ├── backend/
-│ ├── app/
-│ │ ├── main.py # FastAPI application entry point
-│ │ ├── routers/ # API route handlers
-│ │ ├── services/ # Business logic
-│ │ └── utils/ # Utilities
-│ ├── ml/
-│ │ ├── feature_extraction.py # Audio feature extraction
-│ │ ├── model.py # PyTorch model definition
-│ │ └── train_model.py # Training script
-│ ├── models/ # Saved model weights (gitignored)
-│ ├── data/ # Dataset directory (gitignored)
-│ ├── uploads/ # Temporary upload storage
-│ └── requirements.txt
+│   ├── app/
+│   │   ├── main.py                 # FastAPI application entry point
+│   │   ├── routers/                # API route handlers
+│   │   ├── services/               # Business logic
+│   │   └── utils/                  # Utilities
+│   ├── ml/
+│   │   ├── feature_extraction.py   # Audio feature extraction
+│   │   ├── model.py                # PyTorch model definition
+│   │   └── train_model.py          # Training script
+│   ├── models/                     # Saved model weights (gitignored)
+│   ├── data/                       # Dataset directory (gitignored)
+│   ├── uploads/                    # Temporary upload storage
+│   └── requirements.txt
 │
 ├── frontend/
-│ ├── app/
-│ │ ├── page.tsx # Landing page
-│ │ ├── analyze/ # Audio analysis page
-│ │ ├── dashboard/ # User dashboard
-│ │ ├── history/ # Analysis history
-│ │ ├── profile/ # User profile
-│ │ ├── login/ # Login page
-│ │ ├── register/ # Registration page
-│ │ └── settings/ # Account settings
-│ ├── components/ # Reusable UI components
-│ ├── context/ # React context providers
-│ ├── lib/ # API clients and utilities
-│ ├── public/ # Static assets
-│ └── package.json
+│   ├── app/
+│   │   ├── page.tsx                # Landing page
+│   │   ├── analyze/                # Audio analysis page
+│   │   ├── dashboard/              # User dashboard
+│   │   ├── history/                # Analysis history
+│   │   ├── profile/                # User profile
+│   │   ├── login/                  # Login page
+│   │   ├── register/               # Registration page
+│   │   └── settings/               # Account settings
+│   ├── components/                 # Reusable UI components
+│   ├── context/                    # React context providers
+│   ├── lib/                        # API clients and utilities
+│   ├── public/                     # Static assets
+│   └── package.json
 │
 ├── .gitignore
 ├── LICENSE
 └── README.md
-
-text
+```
 
 ## Getting Started
 
